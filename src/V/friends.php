@@ -18,7 +18,7 @@
 <center>
     <h5 id="title">Your matching.</h5>
 </center>
-<br/><br/><br/>
+<br/><br/>
 
 <div class="row">
     <?php
@@ -32,10 +32,12 @@
         
         if(in_array($arr[0], $getFriend) == TRUE && $arr[0] != $_SESSION['profil']['id']){
             ?>
+           
                 <div class="col-lg-3">
+                <center>
                     <div class="container">
                     <?php                  
-                        echo '<img class="col d-flex align-items-center justify-content-center" src="'. $num .'" alt="random image">';
+                        echo '<img class="card-img" id="card" src="'. $num .'" alt="random image">';
                     ?>
                             <div class="middle">
                                 <div class="info-user">
@@ -51,13 +53,17 @@
                                             <input id="goToPage" type="hidden" value="<?php echo $arr[0] ?>" name="idUser">
                                             <input id="mail" type="hidden" value="<?php echo $dataUser['mail'] ?>" name="mail">
                                             <input id="login" type="hidden" value="<?php echo $dataUser['login'] ?>" name="login">
-                                            <a href="#" onclick="$(this).closest('form').submit()">Click here for tchat</a>
+                                            <a href="#" onclick="$(this).closest('form').submit()"  style="color:#E9467C;text-decoration:none;font-family: 'Roboto', sans-serif;">Click here to tchat</a>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                     </div>
+
+                    <br/><br/>
+                    </center>
                 </div>
+               
             <?php
               
             }
@@ -65,5 +71,6 @@
     }
 ?>
 </div>
+<br/><br/>
 
 <?php require('footer.php'); ?>

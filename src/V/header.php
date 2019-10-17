@@ -31,19 +31,22 @@
     <nav class="navbar navbar-light" style="background-color: white;">
         <a href="index.php" class="navbar-brand" style="color:#E9467C"><img src="V/pictures/icon.png" class="d-inline-block align-top">Matcha</a>
         <form class="form-inline">
-            <div class="dropdown">
+
+            <!-- <div class="dropdown">
                     <button class="btn dropdown-toggle" type="button"  data-toggle="dropdown" aria-haspopup="true"  style="text-decoration:none; color:#E9467C; font-family: 'Arimo', sans-serif;background-color:white;border: none;">
                       My account
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a href="index.php?controle=profil&action=add_profil" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">My profile</a><br/>
-                      <!-- <a href="index.php?controle=profil&action=add_pic">My PICTURE</a><br/> -->
-                      <a href="index.php?controle=param&action=modif_pseudo">Modifier le profil</a><br/>
-                      <a href="index.php?controle=param&action=modif_psw">Changer le Mot de passe</a><br/>
-                    </div>
-            </div>
-            <a href="index.php?controle=notif&action=page_notif" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">Notif</a><br/>
-            <a href="index.php?controle=match&action=getmatch">Mes amis</a><br/>
+                      <a href="index.php?controle=profil&action=add_pic">My PICTURE</a><br/> -->
+                      <!-- <a href="index.php?controle=param&action=modif_pseudo">Modifier le profil</a><br/>
+                      <a href="index.php?controle=param&action=modif_psw">Changer le Mot de passe</a><br/> -->
+                    <!-- </div> -->
+            <!-- </div> -->
+
+            <a href="index.php?controle=profil&action=add_profil" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">My profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="index.php?controle=notif&action=page_notif" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">Notifications</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="index.php?controle=match&action=getmatch" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">My friends</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.php?controle=logout&action=deconnect" style="text-decoration:none; color:#E9467C; font-family: 'Arimo', sans-serif;">Sign Out</a>
         </form>
     </nav>  

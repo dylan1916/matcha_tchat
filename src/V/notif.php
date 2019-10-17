@@ -5,7 +5,7 @@
 <center>
     <h5 id="title">My notifications.</h5>
 </center>
-<br/><br/><br/><br/>
+<br/><br/>
 <div class="container">
     <?php
     require_once('M/notif_bd.php');
@@ -29,7 +29,7 @@
         }
     }
     ?>
+    <br/><br/>
 </div>
-<br/><br/><br/>
 
 <?php require('footer.php'); ?>
