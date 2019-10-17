@@ -1,0 +1,72 @@
+<head>
+    <title>Matcha</title>
+</head>
+<?php
+    require('header.php');
+    require('V/filter.php');
+    $directory = 'ImageUser';
+    $images = glob($directory . "/*/*.*");
+?>
+ 
+    <div class="container-fluid">
+        <div class="row">
+        <?php
+            require 'M/accueil_bd.php';
+            $idUser = accueil_bd();
+            // print_r($idUser);
+            for ($i=0; $i < count($images); $i++){
+                $num = $images[$i]; 
+                $bla = str_replace('ImageUser/', '', $num);
+                $arr = explode("/", $bla, 2);
+                require_once 'M/accueil_bd.php';
+                $dataUser = getUserdata($arr[0]);
+
+                if(in_array($arr[0], $idUser) == TRUE && $arr[0] != $_SESSION['profil']['id']){  //pour orientation sex
+                    if ($_SESSION['filter'] && (in_array($arr[0], $_SESSION['filter']) == TRUE)) { //pour filtre
+            ?>
+            <div class="col-lg-3">
+                <div class="row overlay">
+                    <div class="col-lg-12">
+                        <div class="img-best-container">
+                            <div class="hello">
+                            <?php 
+                            
+                                echo '<img class="col d-flex align-items-center justify-content-center" src="'. $num .'" alt="random image">';
+                            ?>
+                                <div class="middle">
+                                    <div class="info-user">
+                                        <?php
+                                            echo $dataUser['login'];
+                                            echo " ".$dataUser['age'] . " ans";
+                                        ?>
+                                    </div>
+                                    <form action="index.php?controle=accueil&action=displayProfilUser" method="post">
+                                        <div class="text">
+                                            <input id="goToPage" type="hidden" value="<?php echo $arr[0] ?>" name="idUser">
+                                            <a href="#" style="color:#E9467C;text-decoration:none;font-family: 'Roboto', sans-serif;" onclick="$(this).closest('form').submit()">Click here to go on her profil</a>
+                                        </div>
+                                    </form>
+                                    <form method="post" action="index.php?controle=profil&action=like">
+                                        <input id="goToPage" type="hidden" value="<?php echo $dataUser['id'] ?>" name="idUser">
+                                        <input id="loveUser" type="hidden" value="<?php echo $dataUser['love'] ?>" name="love">
+                                        <input type="image" src="V/pictures/like.svg" name="img_id" alt="like" width="25" height="25">
+                                        <!-- <i class="fas fa-heart"></i> -->
+                                    </form>
+                                    <!-- <i class="fas fa-heart fa-3x cursorpointer"></i> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+                }
+            }
+                }
+            ?>
+        </div>
+    </div>
+
+        <br/><br/><br/>
+    
+<?php require('footer.php'); ?>
