@@ -1,6 +1,6 @@
 <div class="pos-f-t">
     <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
+        <div class="bg-dark p-4" style="background-color: #EAEAEB!important;">
             <form action="index.php?controle=filter&action=get_filter" method="post">      
                 <div class="container">
                     <div class="row">
@@ -60,14 +60,29 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" name="submit" style="text-align:left;" class="btn btn-primary" id="btn-account">Search</button>
+                <!-- <button type="submit" name="submit" style="text-align:left;   background-color:#E9467C; color:white; border-radius:10px;padding-left:20%;" class="btn btn-primary" id="btn-account">Search</button> -->
+                <button type="submit" name="submit" class="btn btn-primary"  id="btn-account-s">Search</button>
             </form>
         </div>
     </div>
-    <nav class="navbar navbar-dark bg-dark" style="">
+    <nav class="navbar navbar-dark bg-dark" style="background-color: #EAEAEB!important;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
 </div>
 <br>
+
+
+
+<style>
+
+#btn-account-s{
+    background-color:#E9467C; 
+    color:white; 
+    border-color:white; 
+    border-radius:10px;
+    text-align: left;
+}
+
+</style>

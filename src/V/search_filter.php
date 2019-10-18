@@ -31,19 +31,20 @@
                             <div class="hello">
                             <?php 
                             
-                                echo '<img class="col d-flex align-items-center justify-content-center" src="'. $num .'" alt="random image">';
+                                echo '<img class="card-img" id="card" src="'. $num .'" alt="random image">';
                             ?>
                                 <div class="middle">
                                     <div class="info-user">
                                         <?php
                                             echo $dataUser['login'];
-                                            echo " ".$dataUser['age'] . " ans";
+                                            echo ", ";
+                                            echo " ".$dataUser['age'] . " years old";
                                         ?>
                                     </div>
                                     <form action="index.php?controle=accueil&action=displayProfilUser" method="post">
                                         <div class="text">
                                             <input id="goToPage" type="hidden" value="<?php echo $arr[0] ?>" name="idUser">
-                                            <a href="#" style="color:#E9467C;text-decoration:none;font-family: 'Roboto', sans-serif;" onclick="$(this).closest('form').submit()">Click here to go on her profil</a>
+                                            <a href="#" style="color:#E9467C;text-decoration:none;font-family: 'Roboto', sans-serif;" onclick="$(this).closest('form').submit()">Click here to see the profil</a>
                                         </div>
                                     </form>
                                     <form method="post" action="index.php?controle=profil&action=like">

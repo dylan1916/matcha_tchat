@@ -43,7 +43,8 @@
                                 <div class="info-user">
                                 <?php
                                     echo $dataUser['login'];
-                                    echo " ". $dataUser['age'] . " ans";
+                                    echo ", ";
+                                    echo " ". $dataUser['age'] . " years old";
                                 ?>
                                 </div>
                                 <div class="text">

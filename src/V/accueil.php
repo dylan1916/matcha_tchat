@@ -52,8 +52,8 @@
                         <input type="email" class="form-control" placeholder="Enter your e-mail" aria-describedby="emailHelp" name="mail" required>
                     </div>
                     <div class="form-group">
-                        <label for="password">Enter your password</label></br>
-                        <input type="password" class="form-control" placeholder="Enter Password" name="password" required></br>
+                        <label for="password">Password</label></br>
+                        <input type="password" class="form-control" placeholder="Enter your password" name="password" required></br>
                     </div>
                     <center>
                         <a href="index.php?controle=connect&action=forget_psw" style="text-decoration:none;"><p style="font-style:bold;color:#E9467C;">Forget your password ?</p></a>
