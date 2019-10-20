@@ -1,3 +1,6 @@
+<head>
+    <link type="text/css" rel="stylesheet" href="V/css/forgetPassword.css">
+</head>
 <?php
     require('header.php');
 ?>

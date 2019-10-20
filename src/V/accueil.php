@@ -9,7 +9,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Secular+One|Work+Sans:700&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="V/css/homepage.css">
-    <link type="text/css" rel="stylesheet" href="V/css/footer.css">
     <title>Matcha</title>
 </head>
 <div class="container-fluid">

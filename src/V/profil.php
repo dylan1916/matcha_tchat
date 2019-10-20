@@ -1,4 +1,5 @@
 <head>
+    <link type="text/css" rel="stylesheet" href="V/css/profil.css">
     <title>Matcha</title>
 </head>
 <?php require('header.php'); ?>

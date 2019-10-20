@@ -1,4 +1,5 @@
 <head>
+    <link type="text/css" rel="stylesheet" href="V/css/search.css">
     <title>Matcha</title>
 </head>
 <?php

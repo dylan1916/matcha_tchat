@@ -1,4 +1,6 @@
 <head>
+    <link type="text/css" rel="stylesheet" href="V/css/add_updateProfil.css">
+    <link type="text/css" rel="stylesheet" href="V/style.css">
     <title>My profil</title>
 </head>
 <?php require('header.php'); ?>

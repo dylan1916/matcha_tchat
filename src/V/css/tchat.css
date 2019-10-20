@@ -27,11 +27,11 @@
     font-size: 125%;
 }
 
-.i-user:before { content: '\e801'; } /* '' */
-/* .i-send:before { content: '\e802'; '' */
+.i-user:before { content: '\e801'; } 
+.i-send:before { content: '\e802'; }
 
 
-/* body{
+body{
     font-family: Roboto;
     margin: 0;
     padding: 0;
@@ -121,7 +121,7 @@
 }
 
 .field-area{
-    heaight:auto;
+    height:auto;
     padding-top:5px;
     width:90%;
 }
@@ -269,4 +269,4 @@ p.error{
 
 .messages-box .message.message-user{
     background-color:#bdc3c7;
-}  */
+} */

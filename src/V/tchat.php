@@ -10,8 +10,10 @@
             <?php echo $getUser['login']; ?>
         </h2>
 
+        <!-- <br/>
+         -->
         <div class="messages-box"></div>
-
+    
         <div class="bottom">
             <div class="field field-area">
                 <label for="message" class="field-label">Votre message</label>
@@ -20,9 +22,7 @@
             <button type="submit" id="send" class="send">
                 <span class="i-send"></span>
             </button>
-
         </div>
-
 
 
 <!-- <script src="js/tchat.func.js"></script>  -->
@@ -101,7 +101,7 @@ setInterval(recupMessage,1000);
     box-sizing:border-box;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'app';
     src: url('font/app.eot?23297456');
     src: url('font/app.eot?23297456#iefix') format('embedded-opentype'),
@@ -110,7 +110,7 @@ setInterval(recupMessage,1000);
     url('font/app.svg?23297456#app') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
 [class^="i-"]:before, [class*=" i-"]:before {
     font-family: "app";
@@ -321,11 +321,20 @@ p.error{
     background-color:#2980b9;
 }
 
-.bottom{
+/* .bottom{
     position:fixed;
     background-color:#fff;
     bottom:0px;
     width:96%;
+} */
+
+.bottom{
+
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background-color:#fff;
+    width:100%;
 }
 
 .bottom .send{

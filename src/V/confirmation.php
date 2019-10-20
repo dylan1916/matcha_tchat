@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <link type="text/css" rel="stylesheet" href="V/css/create_account.css">
+</head>
 <body>
 
 <?php

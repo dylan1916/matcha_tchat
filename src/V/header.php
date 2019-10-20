@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link type="text/css" rel="stylesheet" href="V/css/create_account.css">
-    <link type="text/css" rel="stylesheet" href="V/css/header.css">
+    <!-- <link type="text/css" rel="stylesheet" href="V/css/create_account.css">
     <link type="text/css" rel="stylesheet" href="V/css/add_updateProfil.css">
     <link type="text/css" rel="stylesheet" href="V/style.css">
-    <link type="text/css" rel="stylesheet" href="V/css/footer.css">
     <link type="text/css" rel="stylesheet" href="V/css/homeFilter.css">
     <link type="text/css" rel="stylesheet" href="V/css/search.css">
     <link type="text/css" rel="stylesheet" href="V/css/forgetPassword.css">
     <link type="text/css" rel="stylesheet" href="V/css/profil.css">
     <link type="text/css" rel="stylesheet" href="V/css/friends.css">
     <link type="text/css" rel="stylesheet" href="V/css/notif.css">
-    <!-- <link type="text/css" rel="stylesheet" href="V/css/tchat.css"> -->
+    <link type="text/css" rel="stylesheet" href="V/css/tchat.css"> -->
+    <link type="text/css" rel="stylesheet" href="V/css/header.css">
+    <link type="text/css" rel="stylesheet" href="V/css/footer.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/releases/v5.10.2/js/all.js" data-auto-add-css="false"></script>
     <link href="https://use.fontawesome.com/releases/v5.10.2/css/svg-with-js.css" rel="stylesheet" />
