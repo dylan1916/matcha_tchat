@@ -121,20 +121,22 @@
                     <input value="<?php echo(htmlspecialchars($_SESSION['profil']['zipcode'])) ;?>" id="zipcode" type="tel" class="form-control" name="zipcode" minlength="4" maxlength="10" placeholder="Zip Code" required>
                 </div>
                 <div class="form-group">
-                    <textarea maxlength="100" class="nosizetextarea form-control" name="biography" id="exampleFormControlTextarea1" rows="5" placeholder="Write a little biography about you...(less than 200 characters)" required><?php echo(htmlspecialchars($_SESSION['profil']['biography'])) ;?></textarea>
+                    <textarea maxlength="100" class="nosizetextarea form-control" name="biography" id="exampleFormControlTextarea1" rows="3" placeholder="Write a little biography about you...(less than 200 characters)" required><?php echo(htmlspecialchars($_SESSION['profil']['biography'])) ;?></textarea>
                 </div>
                 <br/>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <button type="submit" class="btn btn-primary" id="btn-account">Confirm my information</button>
+                    <button type="submit" class="btn btn-primary" id="btn-account">Confirm my information</button><br/><br/>
+                    <a href="index.php?controle=param&action=delete_account" class="btn btn-primary" id="btn-account">Delete my account</a><br/><br/>
+                    <a href="#" class="btn btn-primary" id="btn-account">My search history</a>
                 </div>
             </div>
         </div>
     </form>
 </div>
 
-<a href="index.php?controle=param&action=delete_account">Supprimer mon compte</a>
+
 
 </center>
 <br/><br/><br/><br/>

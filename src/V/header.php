@@ -30,6 +30,12 @@
   <body>
     <nav class="navbar navbar-light" style="background-color: white;">
         <a href="index.php" class="navbar-brand" style="color:#E9467C"><img src="V/pictures/icon.png" class="d-inline-block align-top">Matcha</a>
+        
+       <form class="form-inline my-2 my-lg-0 " method="post" action="psps.php">
+              <input class="form-control mr-sm-2 test" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
         <form class="form-inline">
 
             <!-- <div class="dropdown">
@@ -47,6 +53,25 @@
             <a href="index.php?controle=profil&action=add_profil" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">My profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.php?controle=notif&action=page_notif" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">Notifications</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.php?controle=match&action=getmatch" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">My friends</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="index.php?controle=logout&action=deconnect" style="text-decoration:none; color:#E9467C; font-family: 'Arimo', sans-serif;">Sign Out</a>
+            <a href="index.php?controle=logout&action=deconnect" style="text-decoration:none; color:#E9467C; font-family: 'Arimo', sans-serif;">Sign Out</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
         </form>
-    </nav>  
+    </nav>
+
+<style>
+
+.btn-outline-danger{
+  border-color:#E9467C;   
+}
+
+.btn-outline-danger:hover{
+  border-color:#E9467C;
+  background-color: #E9467C;
+}
+
+.test{
+  border: 1px solid #E9467C;
+  text-decoration: none;
+}
+
+
+</style>
