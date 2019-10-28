@@ -74,6 +74,12 @@ try {
 		receiver varchar(255) COLLATE utf8_bin NOT NULL,
 		message TEXT COLLATE utf8_bin NOT NULL,
 		date datetime NOT NULL)");
+
+	$bdd->query("CREATE TABLE recuperation(
+		id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+		mail varchar(255) COLLATE utf8_bin NOT NULL,
+		code int(10) UNSIGNED NOT NULL,
+		confirme int(1) UNSIGNED NOT NULL)");
 		
 }
 catch (Exception $error) {

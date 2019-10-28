@@ -61,6 +61,7 @@ function print_insc(){
 
 function send_mail($login, $mail)
 {
+	require 'fonctions.php';
 	require 'config/database.php';
 	$req = $bdd->prepare('select id from user where login = ?');
 	$req->execute(array($_POST['login']));
@@ -69,9 +70,12 @@ function send_mail($login, $mail)
 	// $headers = 'From:' . $sender;
 	$headers = 'From:';
 	$message = 'Bonjour, ' . $login  . ' Pour valider votre compte, 
-	veuillez cliquer sur le lien ci dessous : http://localhost:8888/matcha/src/index.php?r='.$data['id']. 
+	veuillez cliquer sur le lien ci dessous : http://localhost:8888/matcha_final2/src/index.php?r='.$data['id']. 
 	'&controle=accueil&action=home';
-	mail($mail, $subject, $message, $headers); //, implode("\r\n", $headers));
+
+	///c'est le truc de haya
+	// sendmail($mail, $subject, $message, $headers); //, implode("\r\n", $headers));
+	sendmail($subject, $message, $mail);
 
 	require 'V/Confirmation.php';
 }

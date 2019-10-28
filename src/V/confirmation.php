@@ -5,9 +5,6 @@
 </head>
 <body>
 
-<?php
-    require('header.php');
-?>
  <br/><br/><br/>
 <center>
     <h3>Your account has been created.<br/>A confirmation email was sent. Please click on the link in the mail to activate your account.</h3>
@@ -27,7 +24,6 @@ require('footer.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/create_account.css">
-    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>Document</title>
 </head>

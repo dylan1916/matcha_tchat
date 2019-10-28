@@ -17,7 +17,7 @@
                     <input type="email" name="mail" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your e-mail address" required>
                 </div>
                 <br/><br/><br/>
-                <button type="submit" value="submit" class="btn btn-primary" style="  background-color:#E9467C;color:white; border-color:white; border-radius:10px;width:27%;">Send a password recovery link</button>
+                <input type="submit" value="Send a password recovery link" name="submit" class="btn btn-primary" style="  background-color:#E9467C;color:white; border-color:white; border-radius:10px;width:27%;" onclick="myFunction()" required>
             </form>
 </center>
 

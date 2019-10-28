@@ -108,8 +108,12 @@ function likeprofil(){
 	save_like2($idUser);
 	likeprofilbd($idUser, $love);
 
-	require ('M/accueil_bd.php');
-	getUserdata($idUser);
+
+	header('Location: ' . $_SERVER['PHP_SELF'] );
+
+
+	// require ('M/accueil_bd.php');
+	// getUserdata($idUser);
 }
 
 // page search_filter.php

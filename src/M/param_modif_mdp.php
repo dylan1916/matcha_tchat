@@ -31,7 +31,7 @@ function modif_mdp($psw, $mail)
 	{
 	?>
 		<script type="text/javascript">
-			alert('La modification à été correctement effectuée') ;
+			alert('The change has been successfully made') ;
 		</script>
 	<?php
 		return 1;
@@ -39,7 +39,7 @@ function modif_mdp($psw, $mail)
 	else{
 	?>
 		<script type="text/javascript">
-			alert('Nous sommes désolés, nous ne pouvons pas mettre à jour votre mot de passe. Veuillez réessayer.');
+			alert('Sorry, we can not update your password. Try Again.');
 		</script>
 	<?php
 		return 0;

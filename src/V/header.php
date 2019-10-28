@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,10 +33,13 @@
     <nav class="navbar navbar-light" style="background-color: white;">
         <a href="index.php" class="navbar-brand" style="color:#E9467C"><img src="V/pictures/icon.png" class="d-inline-block align-top">Matcha</a>
         
-       <form class="form-inline my-2 my-lg-0 " method="post" action="psps.php">
-              <input class="form-control mr-sm-2 test" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
-            </form>
+
+        <!-- <form class="form-inline my-2 my-lg-0" method="GET" action="index.php?controle=research&action=barre_de_recherche"> -->
+        <!-- <form class="form-inline my-2 my-lg-0" method="GET" action="index.php?controle=dylan&action=dylan"> -->
+        <!-- <form class="form-inline my-2 my-lg-0" method="GET" action="index.php?controle=dylan&action=dylan">
+            <input class="form-control mr-sm-2 test" type="search" name="q" aria-label="Search" placeholder="Search...">
+            <input type="submit" value="Valider">
+        </form> -->
 
         <form class="form-inline">
 
@@ -53,9 +58,14 @@
             <a href="index.php?controle=profil&action=add_profil" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">My profile</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.php?controle=notif&action=page_notif" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">Notifications</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.php?controle=match&action=getmatch" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">My friends</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="index.php?controle=param&action=search" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">Search</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.php?controle=logout&action=deconnect" style="text-decoration:none; color:#E9467C; font-family: 'Arimo', sans-serif;">Sign Out</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
         </form>
     </nav>
+
+
+
+
 
 <style>
 

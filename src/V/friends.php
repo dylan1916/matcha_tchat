@@ -52,6 +52,12 @@
                                 </div>
                                 <div class="text">
                                     <!-- changer ici, mettre le lien pour tchater avec la personne. -->
+                                    <form action="index.php?controle=accueil&action=displayProfilUser" method="post">
+                                        <div class="text">
+                                            <input id="goToPage" type="hidden" value="<?php echo $arr[0] ?>" name="idUser">
+                                            <a href="#" style="color:#E9467C;text-decoration:none;font-family: 'Roboto', sans-serif;" onclick="$(this).closest('form').submit()">Click here to see the profil</a>
+                                        </div>
+                                    </form>
                                     <form action="index.php?controle=tchat&action=tchat" method="post">
                                         <div class="text">
                                             <input id="goToPage" type="hidden" value="<?php echo $arr[0] ?>" name="idUser">

@@ -11,10 +11,11 @@ function getMail($idUser){
 }
 
 function mail_like($idUser){
+	require 'config/database.php';
+
     $dataUser = getMail($idUser);
     $user =  $_SESSION['profil']['login'];
 
-	require 'config/database.php';
 	$subject = 'A person like your profil -Matcha-!';
 	$message = ' Hello, ' . $dataUser['login'] . '! ' . $user . ' a liker ton profil';
     // echo $dataUser['mail'];
@@ -22,10 +23,11 @@ function mail_like($idUser){
 }
 
 function mail_likeBack($idUser){
+	require 'config/database.php';
+
     $dataUser = getMail($idUser);
     $user =  $_SESSION['profil']['login'];
 
-	require 'config/database.php';
 	$subject = 'A person like your profil -Matcha-!';
 	$message = ' Hello, ' . $dataUser['login'] . '! ' . $user . ' vous a liker en retour';
     // echo $dataUser['mail'];
@@ -34,10 +36,11 @@ function mail_likeBack($idUser){
 }
 
 function mail_deleteLike($idUser){
+	require 'config/database.php';
+
     $dataUser = getMail($idUser);
     $user =  $_SESSION['profil']['login'];
 
-	require 'config/database.php';
 	$subject = 'A person like your profil -Matcha-!';
 	$message = ' Hello, ' . $dataUser['login'] . '! ' . $user . ' ne vous like plus';
     // echo $dataUser['mail'];

@@ -58,7 +58,7 @@
                         <input id="goToPage" type="hidden" value="<?php echo $dataUser['id'] ?>" name="idUser">
                         <button type="submit">BLOQUER</button>
                     </form>
-                    <a href="" id="signal">Report this account</a><br>
+                    <!-- <a href="" id="signal">Report this account</a><br> -->
                     <br/><br/>
                     <!-- <form action="">
                         <button type="submit" class="btn btn-primary" id="btn-account">Like</button>

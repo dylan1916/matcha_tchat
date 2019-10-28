@@ -1,104 +1,77 @@
 <?php
 
-/*Pour modifier pseudo et mail*/
-// function modif_pseudo()
-// {
-// 	$pseudo = isset($_POST['pseudo'])?$_POST['pseudo']:'';
-// 	$mail = isset($_POST['mail'])?$_POST['mail']:'';
+function search() {
+	require 'V/search.php';
+}
 
-// 	if (!isset($_SESSION['profil']))
-// 	{
-// 		require 'C/accueil.php';
-// 		home();
-// 		return ;
-// 	}
-// 	if (count($_POST) != 2)
-// 	{
-// 		require 'V/param.html';
-// 	}
-// 	else{
-// 		require('M/param_bd.php');
-// 		if ((modif_pseudo_bd($pseudo, $mail)) == 1)
-// 		{
-// 			$_SESSION['profil']['pseudo'] = $pseudo;
-// 			$_SESSION['profil']['mail'] = $mail;
-// 			require 'V/param.html';
-// 		}
-// 	}
-// }
+function modify_password(){
+	require 'V/mdp.php';
+}
 
-/*Pour modifier le mot de passe*/
-// function modif_psw()
-// {
-// 	if (!isset($_SESSION['profil']))
-// 	{
-// 		require 'C/accueil.php';
-// 		home();
-// 		return ;
-// 	}
 
-// 	$old_psw = isset($_POST['old_psw'])?$_POST['old_psw']:'';
-// 	$new_psw = isset($_POST['new_psw'])?$_POST['new_psw']:'';
-// 	$mail = $_SESSION['profil']['mail'];
+function modif_psw(){
+	require 'config/database.php';
+	if (isset($_POST['newmdp1']) AND !empty($_POST['newmdp1']) AND isset($_POST['newmdp2']) AND !empty($_POST['newmdp2']))
+   {
+		$mdp1 = $_POST['newmdp1'];
+		$mdp2 = $_POST['newmdp2'];
+		if ($mdp1 === $mdp2)
+       {
+		   $mdp_hash = password_hash($mdp1, PASSWORD_DEFAULT);
+           $insertmdp = $bdd->prepare('UPDATE user SET password = ? WHERE  id = ?');
+		   $insertmdp->execute(array($mdp_hash, $_SESSION['profil']['id']));
+		   ?>
+				<script type="text/javascript">
+					alert('Your password has been changed.');
+				</script>
+			<?php
+		   require 'V/myprofil.php';
+		//    header("index.php?controle=profil&action=add_profil");	
+	   }
+	   else
+	   {
+			?>
+			<script type="text/javascript">
+				alert('Passwords do not match');
+			</script>
+			<?php
+			require 'V/mdp.php';
+	   }
+   }
+   else
+   {
+	   ?>
+		<script type="text/javascript">
+			alert('Fill in the fields please');
+		</script>
+		<?php
+   }
+}
 
-// 	require 'M/param_modif_mdp.php';
-// 	if (count($_POST) != 2)
-// 		require 'V/mdp.html';
-// 	//si le old password nest pas egal
-// 	else if ((verif_psw($mail, $old_psw)) == 0){
-// 		?>
-// 			<script type="text/javascript">
-// 			alert('Le mot de passe actuel n\'est pas valide');
-// 		</script>
-// 			<?php
-// 			require 'V/mdp.html';
-// 	}
-// 	else if ($old_psw == $new_psw){
-// 		?>
-// 			<script type="text/javascript">
-// 			alert('Euh, il semble que vous ayez déjà utilisé ce mot de passe auparavant. Veuillez en choisir un nouveau.');
-// 		</script>
-// 			<?php
-// 			require 'V/mdp.html';
-// 	}
-// 	else if ((strlen($new_psw) < 8) || (!preg_match("#[0-9]+#", $new_psw) || (!preg_match("#[a-zA-Z]+#", $new_psw)))){
-// 		?>
-// 			<script type="text/javascript">
-// 			alert('Votre mot de passe doit contenir au moins 7 caractères et inclure un chiffre');
-// 		</script>
-// 			<?php
-// 			require 'V/mdp.html';
-// 	}
-// 	else{
-// 		if ((modif_mdp($new_psw, $mail)) == 1)
-// 			require 'V/mdp.html';
-// 	}
-// }
+function delete_account(){
+	require 'V/delete_account.php';
+}
 
-// function delete_account(){
-// 	require 'V/delete_account.php';
-// }
+function delete_compte()
+{
+	$password = isset($_POST['password'])?$_POST['password']:'';
 
-// function accueilredir(){
-// 	require 'V/accueil.php';
-// }
+	if (!isset($_SESSION['profil'])){
+		require 'C/accueil.php';
+		home();
+		return ;
+	}
+	if (count($_POST) != 1)
+		require 'V/delete_account.html';
+	if (isset($password) && $password != ""){
+		require 'M/delete_account.php';
+		delete_account_bd($password);
+	}
+	// require 'C/accueil.php';
+	// home();
+	return 1;
+}
 
-// function delete_compte(){
-// 	$password = isset($_POST['password'])?$_POST['password']:'';
-
-// 	if (!isset($_SESSION['profil'])){
-// 		require 'V/accueil.php';
-// 		return ;
-// 	}
-// 	if (count($_POST) != 1)
-// 		require 'V/delete_account.php';
-// 	if (isset($password) && $password != ""){
-// 		require 'M/delete_account.php';
-// 		delete_account_bd($password);
-// 	}
-// 	require 'V/delete_account.php';
-// 	return 1;
-// }
 
 function bloquer(){
 	$id_user_block = $_POST['idUser'];

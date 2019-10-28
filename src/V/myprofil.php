@@ -128,8 +128,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <button type="submit" class="btn btn-primary" id="btn-account">Confirm my information</button><br/><br/>
-                    <a href="index.php?controle=param&action=delete_account" class="btn btn-primary" id="btn-account">Delete my account</a><br/><br/>
-                    <a href="#" class="btn btn-primary" id="btn-account">My search history</a>
+                    <a href="index.php?controle=param&action=modify_password" class="btn btn-primary" id="btn-account">Change the password</a><br/><br/>
+                    <a href="index.php?controle=param&action=delete_account" class="btn btn-primary" id="btn-account">Delete my account</a>
                 </div>
             </div>
         </div>
