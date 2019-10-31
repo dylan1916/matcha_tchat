@@ -22,4 +22,18 @@ function displayProfilUser(){
 }
 
 
+function displayProfilUserMatch(){
+	$idUser = $_POST["idUser"];
+
+	require 'M/visite_bd.php';
+	insert_visite_bd($idUser);
+
+	require 'M/accueil_bd.php';
+	$dataUser = getUserdata($idUser);
+
+    require 'V/profil_match.php';
+}
+
+
+
 ?>

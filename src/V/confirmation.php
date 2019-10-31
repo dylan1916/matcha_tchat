@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <link type="text/css" rel="stylesheet" href="V/css/create_account.css">
+    <link rel="stylesheet" href="V/css/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,13 +20,4 @@ require('footer.php');
     
 </body>
 </html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300i&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/create_account.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <title>Document</title>
-</head>
 

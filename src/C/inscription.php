@@ -69,8 +69,8 @@ function send_mail($login, $mail)
 	$subject = 'Confirmation du compte -Matcha-!';
 	// $headers = 'From:' . $sender;
 	$headers = 'From:';
-	$message = 'Bonjour, ' . $login  . ' Pour valider votre compte, 
-	veuillez cliquer sur le lien ci dessous : http://localhost:8888/matcha_final2/src/index.php?r='.$data['id']. 
+	$message = 'Hello, ' . $login  . '.<br/> To validate your account,
+	please click on the link below : http://localhost:8888/matcha/src/index.php?r='.$data['id']. 
 	'&controle=accueil&action=home';
 
 	///c'est le truc de haya

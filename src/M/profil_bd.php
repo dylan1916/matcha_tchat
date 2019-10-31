@@ -6,7 +6,7 @@ function addProfil($genre, $adress, $zipcode, $city, $biography, $orientation, $
 
     $sql = $bdd->prepare('UPDATE user SET adress = :adress, zipcode = :zipcode, city = :city, orientation = :orientation,
                             name = :name, last_name = :last_name, mail = :mail, login = :login,
-                            genre = :genre, biography = :biography, tags = :tags, age = :age, latitude = :latitude, longitude = :longitude WHERE id= :id');
+                            genre = :genre, biography = :biography, age = :age, latitude = :latitude, longitude = :longitude WHERE id= :id');
 	$res = $sql->execute(array(
 				'adress' => $adress,
 				'zipcode' => $zipcode,
@@ -19,7 +19,6 @@ function addProfil($genre, $adress, $zipcode, $city, $biography, $orientation, $
                 'name' => $name,
                 'mail' => $mail,
                 'login' => $login,
-                'tags' => null,
                 'latitude' => $lat,
                 'longitude' => $lon,
 				'id' => $id
@@ -96,7 +95,7 @@ function save_like2($img_id){
                     'creator_id' => $creator_id,
 					'times' => $time
                     ));
-        require 'C/notif.php';
+        require_once 'C/notif.php';
         mail_like($img_id);
 	}
 	else {
@@ -105,7 +104,7 @@ function save_like2($img_id){
 					'img_id' => $img_id,
 					'creator_id' => $creator_id
                     ));
-        require('C/notif.php');
+        require_once 'C/notif.php';
         mail_deleteLike($img_id);
 	}
 	$req->closeCursor();

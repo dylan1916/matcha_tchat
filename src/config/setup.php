@@ -24,11 +24,9 @@ try {
 		love INT,
 		orientation TEXT,
 		biography TEXT,
-		interests TEXT,
 		age TEXT,
 		latitude TEXT,
 		longitude TEXT,
-		tags TEXT,
 		notif INT)");
 
 	$bdd->query("CREATE TABLE likes(
@@ -48,7 +46,6 @@ try {
 		id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
 		user_one varchar(255) COLLATE utf8_bin NOT NULL,
 		user_two varchar(255) COLLATE utf8_bin NOT NULL,
-		answer varchar(255) COLLATE utf8_bin NOT NULL,
 		time datetime NOT NULL)");
 
 	$bdd->query("CREATE TABLE tags(

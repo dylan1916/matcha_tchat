@@ -82,9 +82,9 @@ function forget(){
 					<html>
 						<body>
 							<div align="center">
-							Bonjour <b>'.$pseudo.'</b><br/>
-							Voici votre code de récupération : <b>'.$recup_code.'</b><br/><br/>
-							Puis cliquer <a href="http://localhost:8888/matcha_final2/src/index.php?controle=connect&action=check_code">ici</a>
+							Hello <b>'.$pseudo.'</b><br/>
+							Here is your recovery code : <b>'.$recup_code.'</b><br/><br/>
+							Then click <a href="http://localhost:8888/matcha/src/index.php?controle=connect&action=check_code">on</a>
 							</div>
 						</body>
 					</html>

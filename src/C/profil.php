@@ -104,7 +104,7 @@ function likeprofil(){
 	$love = $_POST["love"];
 	
 	// echo $idUser;
-	require 'M/profil_bd.php';
+	require_once 'M/profil_bd.php';
 	save_like2($idUser);
 	likeprofilbd($idUser, $love);
 

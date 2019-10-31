@@ -11,49 +11,60 @@ function getMail($idUser){
 }
 
 function mail_like($idUser){
-	require 'config/database.php';
+	require 'fonctions.php';
+	require_once 'config/database.php';
 
-    $dataUser = getMail($idUser);
+    $dataUser1 = getMail($idUser);
     $user =  $_SESSION['profil']['login'];
 
 	$subject = 'A person like your profil -Matcha-!';
-	$message = ' Hello, ' . $dataUser['login'] . '! ' . $user . ' a liker ton profil';
-    // echo $dataUser['mail'];
-	mail($dataUser['mail'], $subject, $message);
+	$message = ' Hello, ' . $dataUser1['login'] . '! ' . $user . ' a liker ton profil';
+	// echo $dataUser1['mail'];
+	
+	// mail($dataUser1['mail'], $subject, $message);
+	// sendmail($subject, $message, $dataUser1['mail']);
 }
 
 function mail_likeBack($idUser){
-	require 'config/database.php';
+	require_once 'config/database.php';
 
     $dataUser = getMail($idUser);
     $user =  $_SESSION['profil']['login'];
 
 	$subject = 'A person like your profil -Matcha-!';
 	$message = ' Hello, ' . $dataUser['login'] . '! ' . $user . ' vous a liker en retour';
-    // echo $dataUser['mail'];
-	mail($dataUser['mail'], $subject, $message);
+	// echo $dataUser['mail'];
+	
+	// mail($dataUser['mail'], $subject, $message);
+	// sendmail($subject, $message, $dataUser['mail']);
 
 }
 
 function mail_deleteLike($idUser){
-	require 'config/database.php';
+	require_once 'config/database.php';
 
-    $dataUser = getMail($idUser);
+    $dataUser2 = getMail($idUser);
     $user =  $_SESSION['profil']['login'];
 
 	$subject = 'A person like your profil -Matcha-!';
-	$message = ' Hello, ' . $dataUser['login'] . '! ' . $user . ' ne vous like plus';
-    // echo $dataUser['mail'];
-	mail($dataUser['mail'], $subject, $message);
+	$message = ' Hello, ' . $dataUser2['login'] . '! ' . $user . ' ne vous like plus';
+	// echo $dataUser2['mail'];
+	
+	// mail($dataUser2['mail'], $subject, $message);
+	// sendmail($subject, $message, $dataUser2['mail']);
 }
 
 function page_notif(){
 	$user =  $_SESSION['profil']['login'];
 
-	require 'M/notif_bd.php';	
+	require_once 'M/notif_bd.php';	
 	$res = get_notif_bd();
-	require 'V/notif.php';
-	return $id_other;
+	require_once 'V/notif.php';
+	// print_r($res);
+	if($res == NULL){
+		require_once 'V/no_notif.html';
+	}
+	return $res;
 }
 
 ?>

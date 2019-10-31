@@ -52,18 +52,27 @@
                                 </div>
                                 <div class="text">
                                     <!-- changer ici, mettre le lien pour tchater avec la personne. -->
-                                    <form action="index.php?controle=accueil&action=displayProfilUser" method="post">
+                                    <form action="index.php?controle=accueil&action=displayProfilUserMatch" method="post">
                                         <div class="text">
                                             <input id="goToPage" type="hidden" value="<?php echo $arr[0] ?>" name="idUser">
                                             <a href="#" style="color:#E9467C;text-decoration:none;font-family: 'Roboto', sans-serif;" onclick="$(this).closest('form').submit()">Click here to see the profil</a>
                                         </div>
                                     </form>
+                                    <!-- <img src="V/pictures/chat.png" alt="chat"> -->
                                     <form action="index.php?controle=tchat&action=tchat" method="post">
                                         <div class="text">
                                             <input id="goToPage" type="hidden" value="<?php echo $arr[0] ?>" name="idUser">
                                             <input id="mail" type="hidden" value="<?php echo $dataUser['mail'] ?>" name="mail">
                                             <input id="login" type="hidden" value="<?php echo $dataUser['login'] ?>" name="login">
                                             <a href="#" onclick="$(this).closest('form').submit()"  style="color:#E9467C;text-decoration:none;font-family: 'Roboto', sans-serif;">Click here to tchat</a>
+                                        </div>
+                                    </form>
+                                    <form action="index.php?controle=match&action=deletematch" method="post">
+                                        <div class="text">
+                                            <input id="userid" type="hidden" value="<?php echo $arr[0] ?>" name="userid">
+                                            <input id="mail" type="hidden" value="<?php echo $dataUser['mail'] ?>" name="mail">
+                                            <input id="login" type="hidden" value="<?php echo $dataUser['login'] ?>" name="login">
+                                            <a href="#" onclick="$(this).closest('form').submit()"  style="color:#E9467C;text-decoration:none;font-family: 'Roboto', sans-serif;">Click here to delete this match</a>
                                         </div>
                                     </form>
                                 </div>

@@ -22,21 +22,19 @@ function checkmatch($id_send, $id_rec){
     return 0;
 }
 
-function  saveMatch($creator_id, $idUser){
+function saveMatch($creator_id, $idUser){
     require ('config/database.php');
     $id = $_SESSION['profil']['id'];
 
-    $answer = "envoyer";
     $time = date("Y-m-d H:i:s");
 
-    $req = $bdd->prepare('insert into matche(user_one, user_two, answer, time) values (:user_one, :user_two, :answer, :time)');
+    $req = $bdd->prepare('insert into matche(user_one, user_two, time) values (:user_one, :user_two, :time)');
     $res = $req->execute(array(
             'user_one' => $creator_id,
             'user_two' => $idUser,
-            'answer' => $answer,
             'time' => $time
             ));
-    require('C/notif.php');
+    require_once('C/notif.php');
     mail_likeBack($idUser);
     return 1;
 }
@@ -64,6 +62,21 @@ function getFriendsMatch(){
     $users_id = $req->fetchAll(PDO::FETCH_COLUMN, 0);
     //renvoi tout les user_two matcher
     return $users_id;
+}
+
+//function pour supprimer le match que je veux.
+function deleteMatch_bd($user_two){
+    require ('config/database.php');
+    $id = $_SESSION['profil']['id'];
+
+    $reqb = $bdd->prepare('DELETE FROM matche WHERE user_one = :user_one AND user_two = :user_two');
+    $reqb->execute(array(
+        'user_one' => $id,
+        'user_two' => $user_two,
+    ));
+
+    return 1;
+
 }
 
 ?>
