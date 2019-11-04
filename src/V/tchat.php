@@ -6,9 +6,12 @@
     $_SESSION['user'] = $getUser['mail'];
 ?>
 
-        <h2 class="header">
-            <?php echo $getUser['login']; ?>
-        </h2>
+        <br/>
+        <div class="header">
+            <h2><?php echo $getUser['login']; ?></h2>
+            <h6 class="time"></h6>
+        </div>
+
 
         <!-- <br/>
          -->
@@ -33,6 +36,7 @@
 $(document).ready(function() {
 
 recupMessage();
+recupTime();
 
 $('.field-input').focus(function () {
     $(this).parent().addClass('is-focused has-label');
@@ -57,14 +61,6 @@ $('.field-input').each(function () {
 $('#send').click(function(){
     var message = $('#message').val();
     console.log("click btn send fonctionne");
-    // if(message != ''){
-
-    //     // $.post('ajax/post.php',function(){
-    //         // console.log("okokoko");
-    //         // recupMessage();
-    //         $('#message').val('');
-    //     });
-    // }
 
     if (message != ''){
             $.post('ajax/send.php',{message:message},function(){
@@ -75,21 +71,19 @@ $('#send').click(function(){
     }
 });
 
-// function recupMessage(){
-//     $.post('ajax/recup.php',function(data){
-//         $('.messages-box').html(data);
-
-//     });
-// }
-
 function recupMessage() {
     $.post('ajax/recover.php', function(data) {
         $('.messages-box').html(data);
     });
 }
 
+function recupTime () {
+    $.post('ajax/time.php', function(data) {
+        $('.time').html(data);
+    });
+}
+setInterval(recupTime,1000);
 setInterval(recupMessage,1000);
-// console.log("ok");
 
 });
 </script>

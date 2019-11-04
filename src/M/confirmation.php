@@ -12,7 +12,7 @@ function valid_bd($mail)
 	else{
 	?>
 			<script type="text/javascript">
-		alert('Veuillez activer votre compte par mail');
+		alert('Please activate your account by email');
 		</script>
 			<?php
 		require 'V/accueil.php';

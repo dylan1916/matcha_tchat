@@ -50,4 +50,17 @@ function mail_exist($mail)
 	}
 }
 
+
+///initialise lorsqu'un utilisateur se connecte pour la premiere fois
+function connexion($mail)
+{
+	require ('config/database.php');
+	$inserer = $bdd->prepare('insert into connexion (creator_mail, connexion, time)
+			values (:creator_mail, :connexion, NOW())');
+	$inserer->execute(array(
+			'creator_mail' => $mail,
+			'connexion' => 0
+	));
+}
+
 ?>

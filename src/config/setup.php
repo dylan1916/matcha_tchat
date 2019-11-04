@@ -77,6 +77,12 @@ try {
 		mail varchar(255) COLLATE utf8_bin NOT NULL,
 		code int(10) UNSIGNED NOT NULL,
 		confirme int(1) UNSIGNED NOT NULL)");
+	
+	$bdd->query("CREATE TABLE connexion(
+		id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+		creator_mail varchar(255) COLLATE utf8_bin NOT NULL,
+		connexion INT (1) UNSIGNED NOT NULL,
+		time datetime NOT NULL)");
 		
 }
 catch (Exception $error) {

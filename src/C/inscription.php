@@ -38,10 +38,10 @@ function ident()
 			<?php
 			require 'V/accueil.php';
 	}
-	
 	else{
 		require 'M/inscription_bd.php';
 		if (inscription($login, $last_name, $name, $mail, $password1) == 1){
+			connexion($mail);
 			send_mail($login, $mail);
 		}
 		else{

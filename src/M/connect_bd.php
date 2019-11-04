@@ -13,7 +13,19 @@ function verif_ident($mail, $password)
 		return 0;
 	else
 	{
+		// $inserer = $bdd->prepare('insert into connexion (creator_mail, connexion, time)
+		// 	values (:creator_mail, :connexion, NOW())');
+		// $inserer->execute(array(
+		// 	'creator_mail' => $mail,
+		// 	'connexion' => 0
+		// ));
+
 		if ($isPasswordCorrect){
+			
+			// lorsque l'utilisateur est connecté au site
+			$req = $bdd->prepare('UPDATE connexion SET connexion = 1, time = NOW() WHERE creator_mail = ?');
+			$req->execute(array($mail));
+
 			$_SESSION['profil'] = $resultat;
 			return 1;
 		}

@@ -59,7 +59,7 @@
             <a href="index.php?controle=notif&action=page_notif" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">Notifications</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.php?controle=match&action=getmatch" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">My friends</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="index.php?controle=param&action=search" style="text-decoration:none;color:#E9467C;text-align:center;font-family: 'Arimo', sans-serif; font-size: 15px;">Search</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="index.php?controle=logout&action=deconnect" style="text-decoration:none; color:#E9467C; font-family: 'Arimo', sans-serif;">Sign Out</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        
+            <a href="index.php?controle=logout&action=deconnect" style="text-decoration:none; color:#E9467C; font-family: 'Arimo', sans-serif;">Sign Out</a>        
         </form>
     </nav>
 
